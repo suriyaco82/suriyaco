@@ -1,0 +1,32 @@
+.success-story {
+  padding: 20px;
+  color: black; /* Establece el color del texto a negro para todo el contenedor */
+}
+
+.success-story h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: black; /* Establece el color del texto a negro para el encabezado */
+}
+
+.success-story h2 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  color: black; /* Establece el color del texto a negro para el subtítulo */
+}
+
+.success-story p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: black; /* Establece el color del texto a negro para los párrafos */
+}
+
+.media-card {
+  margin-bottom: 20px;
+}
+
+.media-card img, 
+.media-card video {
+  width: 100%;
+  height: auto;
+}
