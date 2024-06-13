@@ -8,7 +8,7 @@ function Contact() {
     email: '',
     message: ''
   });
-
+ 
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({

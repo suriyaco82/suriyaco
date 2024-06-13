@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
 
@@ -31,7 +31,7 @@ const Footer = () => {
           <Col md={12}>
             <p>&copy; 2024 Suriyaco Valley. Todos los derechos reservados.</p>
           </Col>
-        </Row>
+        </Row> 
       </Container>
     </footer>
   );
