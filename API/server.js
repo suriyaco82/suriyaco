@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const port = 3000;
+const port = 3000; // Asegúrate de que el puerto está abierto y accesible
 const app = express();
 
 app.use(cors());
@@ -22,7 +22,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-app.post('http://suriyaco.ar/send', (req, res) => {
+app.post('/send', (req, res) => {
   const { name, email, message } = req.body;
 
   const mailOptions = {

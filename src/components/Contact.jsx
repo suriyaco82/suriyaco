@@ -30,14 +30,12 @@ function Contact() {
       });
     } catch (error) {
       if (error.response) {
-        // El servidor respondió con un código de estado fuera del rango de 2xx
         Swal.fire({
           icon: 'error',
           title: 'Error',
           text: 'Error al enviar el correo: ' + error.response.data,
         });
       } else if (error.request) {
-        // La solicitud se hizo pero no se recibió respuesta
         console.error('Error en la solicitud:', error.request);
         Swal.fire({
           icon: 'error',
@@ -45,7 +43,6 @@ function Contact() {
           text: 'Error al enviar el correo. No se recibió respuesta del servidor.',
         });
       } else {
-        // Algo sucedió al configurar la solicitud que desencadenó un error
         console.error('Error en la configuración de la solicitud:', error.message);
         Swal.fire({
           icon: 'error',
