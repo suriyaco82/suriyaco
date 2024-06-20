@@ -2,23 +2,24 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config();
 
-const port = 3000; // Asegúrate de que el puerto está abierto y accesible
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.suriyaco.ar', // Asegúrate de que este host es correcto
-  port: 465, // Puerto para SSL
-  secure: true, // true para SSL
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT,
+  secure: true,
   auth: {
-    user: 'at@suriyaco.ar',
-    pass: 'larioja1591'
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS
   },
   tls: {
-    rejectUnauthorized: false // Ignorar validación de certificados (no recomendado para producción)
+    rejectUnauthorized: false
   }
 });
 
@@ -35,13 +36,12 @@ app.post('/send', (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error("Error al enviar el correo:", error);
-      return res.status(500).send('Error al enviar el correo: ' + error.toString());
+      return res.status(500).json({ error: 'Error al enviar el correo: ' + error.toString() });
     }
-    res.send('Correo enviado: ' + info.response);
+    res.json({ message: 'Correo enviado: ' + info.response });
   });
 });
 
 app.listen(port, () => {
-  console.log(`Servidor de correo http://localhost:${port}`);
+  console.log(`Servidor de correo Listo y escuchando en el puerto ${port}`);
 });
- 

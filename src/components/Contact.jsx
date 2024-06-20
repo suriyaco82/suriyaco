@@ -8,7 +8,7 @@ function Contact() {
     email: '',
     message: ''
   });
- 
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({
@@ -20,11 +20,11 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://suriyaco.ar/send', formData);
+      const response = await axios.post(process.env.REACT_APP_API_URL, formData);
       Swal.fire({
         icon: 'success',
         title: 'Correo enviado',
-        text: response.data,
+        text: response.data.message,
         showConfirmButton: false,
         timer: 1500
       });
@@ -33,7 +33,7 @@ function Contact() {
         Swal.fire({
           icon: 'error',
           title: 'Error',
-          text: 'Error al enviar el correo: ' + error.response.data,
+          text: 'Error al enviar el correo: ' + error.response.data.error,
         });
       } else if (error.request) {
         console.error('Error en la solicitud:', error.request);

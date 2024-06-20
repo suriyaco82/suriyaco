@@ -17,27 +17,27 @@ function Home() {
       title: 'Escaneo 3D',
       description: 'Mediante dispositivos moviles se esta llevando a cabo el escaneo y la digitalizacion inteligente de algunos monumentos de la ciudad.',
       mediaType: 'video',
-      mediaUrl: 'http://suriyaco.ar/images/realdadA.mov',
-      poster: 'http://suriyaco.ar/images/nobe.jpeg',
+      mediaUrl: 'https://suriyaco.ar/images/realdadA.mov',
+      poster: 'https://suriyaco.ar/images/nobe.jpeg',
     },
     {
       title: 'Realidad Virtual',
       description: 'Con la plataforma de ESRI y su aplicacion VR360, se esta desarrollando una aplicacion para el uso de las gafas de META.',
       mediaType: 'image',
-      mediaUrl: 'http://suriyaco.ar/images/mapasRV.jpg',
+      mediaUrl: 'https://suriyaco.ar/images/mapasRV.jpg',
     },
     {
       title: 'App Realidad Aumentada',
       description: 'Se esta desarrollando una aplicacion para leer archivos en 3D, para IOS, la misma sera parte del proyecto de la virualizacion de monumentos. ',
       mediaType: 'image',
-      mediaUrl: 'http://suriyaco.ar/images/xcode.JPG',
+      mediaUrl: 'https://suriyaco.ar/images/xcode.JPG',
     },
     {
       title: 'Nube de puntos',
       description: 'Modelo del Dique de los Sauces nube de puntos.',
       mediaType: 'video',
-      mediaUrl: 'http://suriyaco.ar/images/dique.MOV',
-      poster: 'http://suriyaco.ar/images/dique_poster.jpg',
+      mediaUrl: 'https://suriyaco.ar/images/dique.MOV',
+      poster: 'https://suriyaco.ar/images/dique_poster.jpg',
     },
   ];
 
@@ -72,8 +72,8 @@ function Home() {
               <Row>
                 <Col md={4}>
                   <Card className="image-card">
-                    <video className="card-video" controls poster="http://suriyaco.ar/images/RAmapas.jpeg">
-                      <source src="http://suriyaco.ar/images/salarRA.MP4" type="video/mp4" />
+                    <video className="card-video" controls poster="https://suriyaco.ar/images/RAmapas.jpeg">
+                      <source src="https://suriyaco.ar/images/salarRA.MP4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                     <Card.Body>
@@ -84,8 +84,8 @@ function Home() {
                 </Col>
                 <Col md={4}>
                   <Card className="image-card">
-                    <video className="card-video" controls poster="http://suriyaco.ar/images/gemelo.jpeg">
-                      <source src="http://suriyaco.ar/images/gemelodigital.MP4" type="video/mp4" />
+                    <video className="card-video" controls poster="https://suriyaco.ar/images/gemelo.jpeg">
+                      <source src="https://suriyaco.ar/images/gemelodigital.MP4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                     <Card.Body>
@@ -96,8 +96,8 @@ function Home() {
                 </Col>
                 <Col md={4}>
                   <Card className="image-card">
-                    <video className="card-video" controls poster="http://suriyaco.ar/images/captura.jpeg">
-                      <source src="http://suriyaco.ar/images/capturando.MP4" type="video/mp4" />
+                    <video className="card-video" controls poster="https://suriyaco.ar/images/captura.jpeg">
+                      <source src="https://suriyaco.ar/images/capturando.MP4" type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                     <Card.Body>
