@@ -73,7 +73,7 @@ function Home() {
                 <Col md={4}>
                   <Card className="image-card">
                     <video className="card-video" controls poster="https://suriyaco.ar/images/RAmapas.jpeg">
-                      <source src="https://suriyaco.ar/images/salarRA.MP4" type="video/mp4" />
+                      <source src="https://suriyaco.ar/images/realdadA.mov" type="video/mov" />
                       Your browser does not support the video tag.
                     </video>
                     <Card.Body>
