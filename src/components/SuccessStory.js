@@ -15,8 +15,8 @@ function SuccessStory() {
 
     ],
     media: [
-      { type: 'image', url: 'http://suriyaco.ar/images/success1.jpg' },
-      { type: 'video', url: 'http://suriyaco.ar/images/success1.mp4', poster: 'http://suriyaco.ar/images/success1_poster.jpg' },
+      { type: 'image', url: 'https://suriyaco.ar/images/gemelo.jpeg' },
+      { type: 'video', url: 'https://suriyaco.ar/images/gemelodigital.MP4', poster: 'https://suriyaco.ar/images/gemelo.jpeg' },
     ],
   };
 

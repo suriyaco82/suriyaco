@@ -19,12 +19,31 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const apiUrl = process.env.REACT_APP_API_URL;
+    if (!apiUrl) {
+      console.error('API URL no está definida');
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'La URL de la API no está definida. Verifica tu archivo .env',
+      });
+      return;
+    }
+
+    console.log('API URL:', apiUrl);
+    console.log('Form Data:', formData);
+
     try {
-      const response = await axios.post(process.env.REACT_APP_API_URL, formData);
+      const response = await axios.post(apiUrl, formData, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       Swal.fire({
         icon: 'success',
         title: 'Correo enviado',
-        text: response.data.message,
+        text: response.data,
         showConfirmButton: false,
         timer: 1500
       });
@@ -33,7 +52,7 @@ function Contact() {
         Swal.fire({
           icon: 'error',
           title: 'Error',
-          text: 'Error al enviar el correo: ' + error.response.data.error,
+          text: 'Error al enviar el correo: ' + error.response.data,
         });
       } else if (error.request) {
         console.error('Error en la solicitud:', error.request);

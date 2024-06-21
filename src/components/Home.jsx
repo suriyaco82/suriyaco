@@ -37,7 +37,7 @@ function Home() {
       description: 'Modelo del Dique de los Sauces nube de puntos.',
       mediaType: 'video',
       mediaUrl: 'https://suriyaco.ar/images/dique.MOV',
-      poster: 'https://suriyaco.ar/images/dique_poster.jpg',
+      poster: 'https://suriyaco.ar/images/captura.jpeg',
     },
   ];
 
